@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-
 @RestController
 @RequestMapping(path = "/products")
 public class ProductController {
@@ -35,7 +34,7 @@ public class ProductController {
         ProductDTO productDTO = service.findById(id);
         return ResponseEntity.ok(productDTO);
     }
-  
+
     @GetMapping
     public ResponseEntity<Page<ProductDTO>> findAll(Pageable pageable) {
         return ResponseEntity.ok(service.findAll(pageable));
@@ -54,10 +53,10 @@ public class ProductController {
         return ResponseEntity.ok(productDTO);
     }
 
-    @DeleteMapping(path="/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id){
-        service.deleteById(id);
+    @DeleteMapping(path = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) {
+        service.delete(id);
         return ResponseEntity.noContent().build();
     }
-    
+
 }
