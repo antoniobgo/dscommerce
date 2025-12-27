@@ -3,7 +3,6 @@ package com.atwo.dscommerce.dto;
 import com.atwo.dscommerce.entities.Product;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 
@@ -11,7 +10,7 @@ public class ProductDTO {
 
     private Long id;
 
-    @NotBlank(message = "campo requeerido")
+    @NotBlank(message = "campo requerido")
     @Size(min = 3, max = 80, message = "nome deve ter entre 3 e 80 caracteres")
     private String name;
 
