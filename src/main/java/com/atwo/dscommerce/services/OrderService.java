@@ -8,7 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.atwo.dscommerce.dto.OrderDTO;
 import com.atwo.dscommerce.dto.OrderItemDTO;
-import com.atwo.dscommerce.dto.ProductDTO;
 import com.atwo.dscommerce.entities.Order;
 import com.atwo.dscommerce.entities.OrderItem;
 import com.atwo.dscommerce.entities.OrderStatus;
